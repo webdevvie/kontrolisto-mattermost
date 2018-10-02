@@ -1,5 +1,5 @@
-README
-======
+Kontrolisto-Mattermost
+======================
 
 A simple tool that takes text data from stdin and sends it to the mattermost channel of your choosing provided it is configured. Check out mattermost.yml.dist for an example of how to configure it.
 
