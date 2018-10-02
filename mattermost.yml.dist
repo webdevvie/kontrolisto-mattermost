@@ -1,0 +1,5 @@
+mattermost:
+  default:
+    hook: "https://mattermost.example.com/hooks/yourhashhere"
+    picture: ""
+    name: ""

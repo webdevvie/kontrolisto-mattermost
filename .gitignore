@@ -1,0 +1,10 @@
+vendor
+.idea
+build
+mattermost.phar
+mattermost.yml
+coverage
+composer.lock
+pakket.phar
+composer.phar
+

@@ -1,0 +1,43 @@
+<info>
+ __                 __                .__  .__          __
+|  | ______   _____/  |________  ____ |  | |__| _______/  |_  ____
+|  |/ /  _ \ /    \   __\_  __ \/  _ \|  | |  |/  ___/\   __\/  _ \
+|    <  <_> )   |  \  |  |  | \(  <_> )  |_|  |\___ \  |  | (  <_> )
+|__|_ \____/|___|  /__|  |__|   \____/|____/__/____  > |__|  \____/
+     \/          \/                                \/
+                __    __                                       __
+  _____ _____ _/  |__/  |_  ___________  _____   ____  _______/  |_
+ /     \\__  \\   __\   __\/ __ \_  __ \/     \ /  _ \/  ___/\   __\
+|  Y Y  \/ __ \|  |  |  | \  ___/|  | \/  Y Y  (  <_> )___ \  |  |
+|__|_|  (____  /__|  |__|  \___  >__|  |__|_|  /\____/____  > |__|
+      \/     \/                \/            \/           \/
+</info>
+
+Written by John Bakker
+
+https://github.com/webdevvie/kontrolisto-mattermost
+
+A simple tool that takes text data from stdin and sends it to the mattermost channel of your choosing provided it is configured. Check out mattermost.yml.dist for an example of how to configure it.
+
+You can send either just send text or send in json to override any of the channel settings in the config.
+Everything except for the actual hook can be changed.
+
+Example:
+`echo "Hello world" | ./mattermost.phar send default`
+
+Example:
+`echo "{\"text\":\"Your text here\",\"name\":"coolstuff"}" | ./mattermost.phar send default`
+
+Your config file should be in the same directory as the phar file and named:
+mattermost.yml
+or if you changed the phar file's name :
+yourfilename.yml
+
+The tool is used by Kontrolisto to send updates to Mattermost channels.
+But can quite easily be used in/for other tools.
+
+To add channels:
+----------------
+./mattermost.phar add <channelname>
+
+You will then be asked to fill in the data. Please note that this overwrites any config that exists for the channelname.

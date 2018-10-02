@@ -1,0 +1,12 @@
+title: "mattermost-out"
+version: "{{VERSION}}"
+description: "Writes text to Mattermost channels"
+type: "shell"
+receives:
+  - stdin
+channels:
+  - output
+arguments:
+  channel:
+    required: false
+    description: "The channel to write to"
